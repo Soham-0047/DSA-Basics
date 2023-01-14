@@ -3,12 +3,19 @@
 #define  pi 3.14
 using namespace std;
 
+
 //inline used to copy the body of the functiion all over the program, readblity increase and compile time also increase.
 //Caution: Best to use it inside 2-3 lines of the code
 
  inline int findmax(int a,int b,int c){ 
   
   return (a>=b)?((a>=c)?a:c):(b>=c)?b:c;
+ }
+
+ int factorial(int m){
+  if(m<=0) return 1;
+  
+  return  m * factorial(m-1);
  }
  
 int main()
@@ -104,6 +111,7 @@ int main()
 
   cout<<2*pi*45<<endl;
   cout<<findmax(56,55,156)<<endl;
+  cout<<"Factorial "<<factorial(5)<<endl;
 
  return 0;
 } 
