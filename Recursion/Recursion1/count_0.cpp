@@ -11,7 +11,7 @@ using namespace std;
 //n%10 == k , 1+f(n/10,k) return 
 //smaller problem calcul;ation
 
-
+//Time complexity O(logn)
 int count_num(int n,int k){
 
 

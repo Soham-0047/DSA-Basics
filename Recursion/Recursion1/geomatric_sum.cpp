@@ -3,11 +3,13 @@
 using namespace std;
 
 /*
+
 Geomatric section
 1/2+ 1/2^2 + 1/2^3 + 1/2^4 + .... + 1/2^k
-
+//T.C = O(n)
 
 */
+
 double sum(int n){
 
     if(n==0) return 1;

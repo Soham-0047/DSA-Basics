@@ -1,5 +1,4 @@
 #include<iostream>
-
 using namespace std;
 
 bool sortedornot(int *arr,int n){
