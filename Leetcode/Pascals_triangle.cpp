@@ -44,12 +44,25 @@ r=5,c =3;
 
 
 */
+
+// Multiplicative way
+
+int pascalTriangle(int r,int c){
+    long long res = 1;
+    for(int i=0;i<c;i++){
+        cout<<"i value -> "<<i<<endl;
+        res =  res * (r-i);
+        res = res / (i+1);
+    }
+    cout<<"res value -> "<<res<<endl;
+    return res;
+}
 int main() {
  int r = 5;
  int c = 3;
 //  vector<int> arr = {1,4,6,4,1};
 // findelement in that particular pascal's triangle
-cout<<nCr(r-1,c-1)<<endl;
-
+// cout<<nCr(r-1,c-1)<<endl;
+cout<<pascalTriangle(r-1,c-1)<<endl;
 
 }
