@@ -34,6 +34,31 @@ void print_btw_range(bst *root,int l,int r){
     }
 }
 
+int maximum(bst *root){
+
+    if(root == NULL){
+        return INT_MIN;
+    }
+
+    return max(root->data, max(maximum(root->left),maximum(root->right)));
+
+}
+int minimum(bst *root){
+    if(root ==NULL){
+        return INT_MAX;
+    }
+    return min(root->data, min(minimum(root->left),minimum(root->right)));
+
+}
+bool check_BST(bst *root){
+    if(root == NULL) return true;
+    //Find the max of left and minimum of right
+    int maxl = maximum(root->left);
+    int minr = minimum(root->right);
+
+    return ((root->data > maxl) && (root->data <= minr) && check_BST(root->left) && check_BST(root->right));
+
+}
 void print(bst*root){
     if(root == NULL){
         return;
@@ -75,6 +100,7 @@ int main()
     //print between two values or range 
     print_btw_range(root,4,13);
 
+    cout<<"Bst -> "<<check_BST(root)<<endl;
 
  
  
